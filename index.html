@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#24150f">
+<meta name="description" content="Anarkali Foods — authentic Pakistani catering for weddings and special occasions.">
+<title>Anarkali Foods | Desi Zaiqa, Dil Se.</title>
+<style>
+:root{--ink:#24150f;--brown:#3b241b;--gold:#d5ad62;--pale:#f0dba9;--cream:#fbf4e8;--paper:#fffaf1;--muted:#806b59;--green:#344b35;--red:#7d2118;--line:rgba(104,73,42,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}button,input,select,textarea{font:inherit}
+.hero{min-height:690px;position:relative;overflow:hidden;color:var(--cream);background:radial-gradient(ellipse at 50% 18%,rgba(193,142,65,.25),transparent 42%),linear-gradient(135deg,#1c0f0a,#48291a)}
+.hero:before,.hero:after{content:"";position:absolute;pointer-events:none;border:1px solid rgba(213,173,98,.28);inset:16px}.hero:after{inset:24px;border-color:rgba(213,173,98,.12)}
+.topbar{width:min(1160px,calc(100% - 64px));margin:auto;padding:32px 0 18px;display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.brand{display:flex;align-items:center;gap:13px}.mark{width:48px;height:48px;display:grid;place-items:center;border:1px solid var(--gold);color:var(--pale);border-radius:50%;font-size:25px}.brand-name{font-size:20px;letter-spacing:.16em;text-transform:uppercase}.brand-sub{color:var(--pale);font:10px Arial,sans-serif;letter-spacing:.24em;margin-top:4px}
+.navlinks{display:flex;gap:24px}.navlinks a,.top-contact{color:var(--pale);text-decoration:none;font:12px Arial,sans-serif;letter-spacing:.06em}.top-contact{text-align:right;line-height:1.9}
+.hero-content{position:relative;z-index:1;text-align:center;width:min(850px,calc(100% - 40px));margin:auto;padding:85px 0 110px}.eyebrow{color:#98713b;text-transform:uppercase;letter-spacing:.28em;font:11px Arial,sans-serif}.hero .eyebrow{color:var(--pale)}
+h1{font-size:clamp(48px,8vw,84px);line-height:.98;font-weight:400;margin:24px 0 18px}h1 span{color:var(--gold);font-style:italic}.hero-copy{max-width:650px;margin:0 auto;color:#e5d8c4;font-size:17px;line-height:1.8}
+.ornament{display:flex;justify-content:center;align-items:center;gap:13px;margin:25px 0;color:var(--gold)}.ornament:before,.ornament:after{content:"";width:70px;height:1px;background:var(--gold);opacity:.65}
+.cta{display:inline-block;margin-top:24px;padding:15px 29px;background:var(--gold);color:#24150f;text-decoration:none;text-transform:uppercase;letter-spacing:.13em;font:11px Arial,sans-serif;transition:.2s}.cta:hover{transform:translateY(-2px);background:var(--pale)}
+.section{padding:76px 22px}.section-inner{max-width:1120px;margin:auto}.intro{text-align:center;padding-bottom:28px}.intro h2,.section-title{font-weight:400;font-size:clamp(34px,5vw,48px);margin:14px 0}.intro p{color:var(--muted);line-height:1.8;max-width:780px;margin:0 auto}
+.food-showcase{background:#f2e6d3}.food-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:35px}.food-card{background:var(--paper);border:1px solid var(--line);padding:10px;box-shadow:0 10px 28px rgba(45,26,13,.08)}.food-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}.food-card h3{font-size:21px;font-weight:400;text-align:center;margin:14px 5px 6px}.food-card p{font:12px/1.6 Arial,sans-serif;color:var(--muted);text-align:center;margin:0 8px 12px}
+.quality{background:var(--brown);color:var(--cream);text-align:center}.quality h2{font-size:clamp(32px,5vw,44px);font-weight:400;margin:12px 0}.quality p{max-width:780px;margin:0 auto;color:#e2d2bb;line-height:1.9}.quality-points{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 30px;margin-top:28px;color:var(--pale);font:12px Arial,sans-serif;letter-spacing:.05em}
+.booking-wrap{padding:76px 22px 90px}.booking-card{max-width:980px;margin:auto;background:var(--paper);border:1px solid var(--line);box-shadow:0 22px 70px rgba(27,14,8,.16);position:relative;padding:clamp(26px,5vw,58px)}.booking-card:before{content:"";position:absolute;inset:9px;border:1px solid rgba(181,137,70,.22);pointer-events:none}
+.form-heading{text-align:center;position:relative;margin-bottom:35px}.form-heading h2{font-size:32px;font-weight:400;margin:0 0 9px}.form-heading p{color:var(--muted);font:13px Arial,sans-serif;margin:0}
+form{position:relative}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 25px}.field{display:flex;flex-direction:column;gap:9px}.field.full{grid-column:1/-1}label{color:#5a4030;font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.13em}
+input,select,textarea{width:100%;border:1px solid #d9c9ae;background:#fffdf8;padding:14px;color:var(--ink);border-radius:0;outline:none;min-height:49px}input:focus,select:focus,textarea:focus{border-color:#a77b3d;box-shadow:0 0 0 3px rgba(213,173,98,.15)}select[multiple]{min-height:190px;padding:8px}select[multiple] option{padding:8px}.hint,.privacy{color:#8a7867;font:11px Arial,sans-serif;line-height:1.6}textarea{min-height:95px;resize:vertical}
+.submit-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:28px}.submit-btn{border:0;background:var(--green);color:white;padding:17px 28px;cursor:pointer;text-transform:uppercase;letter-spacing:.13em;font:11px Arial,sans-serif;min-height:52px}.submit-btn:hover{background:#263b28}.email-link{color:#6d5131;font:12px Arial,sans-serif;text-decoration:underline;text-underline-offset:3px}.privacy{margin-top:17px}.status{display:none;padding:12px 14px;margin-top:15px;background:#edf3e9;color:#29452c;font:13px Arial,sans-serif;line-height:1.5}.status.show{display:block}
+.contact-strip{text-align:center;background:#1d100b;color:var(--cream);padding:35px 20px}.contact-strip p{color:#d9c8ae;font-size:14px}.contact-strip a{color:var(--pale);text-decoration:none}footer{text-align:center;padding:18px;background:#140b07;color:#bda98e;font:10px Arial,sans-serif;letter-spacing:.1em}
+@media(max-width:850px){.navlinks{display:none}.food-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hero{min-height:620px}.topbar{width:calc(100% - 42px);padding-top:28px}.top-contact{font-size:10px}.brand-name{font-size:15px}.mark{width:40px;height:40px}.hero-content{padding:72px 0 85px}.hero-copy{font-size:15px}.section{padding:58px 16px}.food-grid{gap:10px}.food-card{padding:7px}.food-card h3{font-size:18px}.food-card p{font-size:11px}.grid{grid-template-columns:1fr;gap:18px}.field.full{grid-column:auto}.booking-wrap{padding:55px 12px 70px}.booking-card{padding:28px 20px}.submit-row{align-items:stretch;flex-direction:column}.submit-btn{width:100%}.email-link{text-align:center;padding:8px}}
+</style>
+</head>
+<body>
+<header class="hero" id="home">
+<nav class="topbar" aria-label="Main navigation">
+<div class="brand"><div class="mark" aria-hidden="true">✦</div><div><div class="brand-name">Anarkali Foods</div><div class="brand-sub">DESI ZAIQA, DIL SE.</div></div></div>
+<div class="navlinks"><a href="#menu">Our Food</a><a href="#about">Our Promise</a><a href="#enquiry">Catering Enquiry</a></div>
+<!-- <a class="top-contact" href="https://wa.me/923333385676" target="_blank" rel="noopener">WhatsApp · +92 333 3385676<br>mushiahmed77@gmail.com</a> -->
+</nav>
+<div class="hero-content">
+<div class="eyebrow">Pakistani hospitality · Traditional flavours</div>
+<h1>Har Daawat Ko<br><span>Banayein Yaadgaar.</span></h1>
+<div class="ornament">✧ ❖ ✧</div>
+<p class="hero-copy">At Anarkali Foods, we bring the rich flavours of traditional Pakistani cuisine to your special occasions. From aromatic biryani and sizzling karahi to freshly grilled tikka and delightful desserts, every daawat deserves food made with care and served with warmth.</p>
+<a class="cta" href="#enquiry">Plan Your Daawat</a>
+<br><br>
+<a class="top-contact" href="https://wa.me/923333385676" target="_blank" rel="noopener">OR WhatsApp on +92333-3385676</a>
+</div>
+</header>
+
+<main>
+<section class="section intro" id="menu"><div class="section-inner">
+<div class="eyebrow">Desi Zaiqa, Dil Se.</div><h2>Our Food, Our Tradition</h2>
+<p>At Anarkali Foods, food is more than a menu — it is part of how we celebrate, welcome and bring people together. We take inspiration from the dishes loved at Pakistani daawats, preparing familiar flavours with attention to ingredients, freshness and presentation. Explore a taste of what could make your gathering special.</p>
+</div></section>
+
+<section class="section food-showcase"><div class="section-inner">
+<div class="intro" style="padding:0"><div class="eyebrow">A feast for every occasion</div><h2>From Our Kitchen to Your Daawat</h2><p>Traditional favourites for wedding celebrations, family gatherings and memorable moments.</p></div>
+<div class="food-grid">
+<article class="food-card"><img src="assets/anarkali-food-showcase.png" alt="Pakistani biryani with fragrant rice and spices" style="object-position:55% 62%"><h3>Biryani & Pulao</h3><p>Fragrant rice, aromatic spices and the comforting taste of a classic daawat.</p></article>
+<article class="food-card"><img src="assets/anarkali-food-showcase.png" alt="Traditional chicken karahi in a serving pan" style="object-position:18% 78%"><h3>Karahi & Handi</h3><p>Rich, savoury gravies and traditional favourites made for sharing.</p></article>
+<article class="food-card"><img src="assets/anarkali-food-showcase.png" alt="Grilled chicken tikka and kebabs" style="object-position:49% 88%"><h3>BBQ & Chicken Tikka</h3><p>Smoky, freshly grilled bites that bring the BBQ counter to life.</p></article>
+<article class="food-card"><img src="assets/anarkali-food-showcase.png" alt="Traditional Pakistani desserts and sweet dishes" style="object-position:86% 82%"><h3>Desi Desserts</h3><p>A sweet finish with much-loved treats to complete the celebration.</p></article>
+</div>
+</div></section>
+
+<section class="section quality" id="about"><div class="section-inner">
+<div class="eyebrow">Made with care, served with warmth</div><h2>Quality You Can Taste</h2>
+<p>We believe a memorable daawat starts with thoughtful preparation. Our promise is to focus on carefully selected ingredients, balanced traditional seasoning, hygienic food handling and attractive presentation. From menu planning to the final serving, we aim to make hosting easier and every guest feel welcome.</p>
+<div class="quality-points"><span>✦ Carefully selected ingredients</span><span>✦ Traditional Pakistani flavours</span><span>✦ Thoughtful preparation</span><span>✦ Catering for your occasion</span></div>
+</div></section>
+
+<section class="booking-wrap" id="enquiry"><div class="booking-card">
+<div class="form-heading"><div class="eyebrow">Let’s plan your celebration</div><h2>Request a Catering Quote</h2><p>Share your event details and compose your menu</p></div>
+<form id="cateringForm">
+<div class="grid">
+<div class="field"><label for="customerName">Your name *</label><input id="customerName" type="text" placeholder="Full name" autocomplete="name" required></div>
+<div class="field"><label for="phone">Contact number *</label><input id="phone" type="tel" placeholder="+92 3XX XXXXXXX" autocomplete="tel" required></div>
+<div class="field"><label for="eventType">Event type *</label><select id="eventType" required><option value="">Select your event</option><option>Barat</option><option>Valima</option><option>Mangni</option><option>Mayoun</option><option>Mehndi</option><option>Nikkah</option><option>Birthday</option><option>Corporate Event</option><option value="Other">Other</option></select></div>
+<div class="field" id="otherEventWrap" hidden><label for="otherEvent">Please specify event *</label><input id="otherEvent" type="text" placeholder="Your event type"></div>
+<div class="field"><label for="eventDate">Event date *</label><input id="eventDate" type="date" required></div>
+<div class="field"><label for="guests">Number of guests *</label><input id="guests" type="number" min="1" max="100000" placeholder="e.g. 300" required></div>
+<div class="field full"><label for="dishes">Select your dishes * (multiple selection)</label>
+<select id="dishes" multiple size="9" required>
+<optgroup label="Rice & Pulao"><option>Beef Biryani</option><option>Chicken Biryani</option><option>Beef Pulao</option><option>Chicken Pulao</option><option>Yakhni Pulao</option><option>Matka Biryani</option></optgroup>
+<optgroup label="Curries & Karahi"><option>Chicken Karahi</option><option>Mutton Karahi</option><option>Chicken Qorma</option><option>Beef Qorma</option><option>Mutton Kunna</option><option>Beef Nihari</option><option>Haleem</option><option>Chicken Handi</option><option>White Chicken Handi</option><option>Palak Gosht</option></optgroup>
+<optgroup label="BBQ & Live Counter"><option>Chicken Tikka</option><option>Chicken Balochi Tikka</option><option>Seekh Kabab</option><option>Reshmi Kabab</option><option>Malai Boti</option><option>Beef Bihari Boti</option><option>Chapli Kabab</option><option>Live Chicken Karahi</option></optgroup>
+<optgroup label="Breads & Sides"><option>Taftan</option><option>Roghni Naan</option><option>Plain Naan</option><option>Roti</option><option>Paratha</option><option>Raita</option><option>Fresh Salad</option><option>Mint Chutney</option></optgroup>
+<optgroup label="Desserts"><option>Sweet Alaska</option><option>Gulab Jamun</option><option>Shahi Tukray</option><option>Kheer</option><option>Gajar ka Halwa</option><option>Ras Malai</option><option>Fruit Trifle</option><option>Ice Cream</option></optgroup>
+<optgroup label="Drinks"><option>Fresh Lime</option><option>Mint Margarita</option><option>Soft Drinks</option><option>Mineral Water</option></optgroup>
+</select><span class="hint">Hold Ctrl (Windows) or Command (Mac) to select multiple dishes. On mobile, tap multiple options. Add special requests below.</span></div>
+<div class="field full"><label for="notes">Additional requirements (optional)</label><textarea id="notes" placeholder="Venue / area, serving time, custom dishes, dietary preferences, or other details..."></textarea></div>
+</div>
+<div class="submit-row"><button class="submit-btn" type="submit">Send enquiry on WhatsApp ↗</button><a class="email-link" href="#" id="emailLink">Prefer email? Prepare an email enquiry</a></div>
+<div class="status" id="status" role="status" aria-live="polite"></div>
+<p class="privacy">Your enquiry will be prepared in WhatsApp or your email app. Review it and press Send to deliver it. This form does not make a confirmed booking or take payment.</p>
+</form></div></section>
+</main>
+<section class="contact-strip"><div class="eyebrow">Anarkali Foods · Desi Zaiqa, Dil Se.</div><p>For catering enquiries and celebrations</p><p><a href="https://wa.me/923333385676" target="_blank" rel="noopener">WhatsApp: +92 333 3385676</a> &nbsp;  &nbsp; <a href="mailto:mushiahmed77@gmail.com">mushiahmed77@gmail.com</a></p></section>
+<footer>ANARKALI FOODS · HAR DAAWAT KO BANAYEIN YAADGAAR</footer>
+<script>
+const form=document.getElementById('cateringForm'),eventType=document.getElementById('eventType'),otherWrap=document.getElementById('otherEventWrap'),otherEvent=document.getElementById('otherEvent'),eventDate=document.getElementById('eventDate'),statusBox=document.getElementById('status');
+const whatsappNumber='923333385676',emailAddress='mushiahmed77@gmail.com';
+const now=new Date();eventDate.min=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);
+eventType.addEventListener('change',()=>{const other=eventType.value==='Other';otherWrap.hidden=!other;otherEvent.required=other;if(!other)otherEvent.value='';});
+function getMessage(){const dishes=Array.from(document.getElementById('dishes').selectedOptions).map(o=>o.value);const event=eventType.value==='Other'?otherEvent.value.trim():eventType.value;
+return ['ANARKALI FOODS — CATERING ENQUIRY','------------------------------',`Name: ${document.getElementById('customerName').value.trim()}`,`Contact: ${document.getElementById('phone').value.trim()}`,`Event: ${event}`,`Event date: ${eventDate.value}`,`Number of guests: ${document.getElementById('guests').value}`,'Selected dishes:',...dishes.map(d=>`• ${d}`),`Additional requirements: ${document.getElementById('notes').value.trim()||'Not specified'}`,'------------------------------','Please contact me to discuss the menu and quotation.'].join('\n');}
+function valid(){if(!form.reportValidity())return false;if(!document.getElementById('dishes').selectedOptions.length){statusBox.textContent='Please select at least one dish.';statusBox.classList.add('show');return false;}return true;}
+form.addEventListener('submit',e=>{e.preventDefault();statusBox.classList.remove('show');if(!valid())return;statusBox.textContent='WhatsApp is opening with your enquiry. Please press Send in WhatsApp to deliver it.';statusBox.classList.add('show');window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(getMessage())}`,'_blank','noopener,noreferrer');});
+document.getElementById('emailLink').addEventListener('click',e=>{e.preventDefault();statusBox.classList.remove('show');if(!valid())return;statusBox.textContent='Your email app is opening with the enquiry. Please review and press Send.';statusBox.classList.add('show');location.href=`mailto:${emailAddress}?subject=${encodeURIComponent('Catering Enquiry - '+document.getElementById('customerName').value.trim())}&body=${encodeURIComponent(getMessage())}`;});
+</script>
+</body></html>
